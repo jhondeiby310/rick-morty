@@ -1,40 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Rick and Morty Characters App
 
-## Getting Started
+A responsive web application built with Next.js that allows users to browse, filter, and favorite characters from the Rick and Morty series. Character details are available, and filters include search, species, and favorite status. Favorite characters are persisted across sessions.
 
-First, run the development server:
+---
+
+## 🧑‍💻 Technologies Used
+
+- **Next.js 13+**
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Query**
+- **React Testing Library + Jest**
+- **Heroicons**
+- **Framer Motion**
+- **Public Rick and Morty API**: [https://rickandmortyapi.com/]
+
+---
+
+## 🚀 Features
+
+- 🔍 **Real-time search** by name.
+- 🧬 **Filter by species** and **character type** (All / Starred / Others).
+- ❤️ **Favorite characters** stored in `localStorage` and accessible from the sidebar.
+- 🖥️ **Automatic redirection** to the first favorite or available character (desktop only).
+- 📱 **Fully responsive layout** with tailored UX for mobile and desktop.
+- 🧩 **Web Components** used for encapsulated reusable UI pieces.
+- 💅 **Custom scrollbar** for long lists.
+- 📦 **Clean and modular code** using hooks, contexts, and composable components.
+- 🧪 **Unit testing** with Jest and React Testing Library.
+
+---
+
+## 🗂️ Project Structure
+
+src/
+  ├── api/                      # API service functions
+  ├── components/
+  │   ├── character/
+  │   │   ├── detail/           # Character detail view components
+  │   │   └── list/             # Sidebar character list components
+  │   ├── filters/              # Filters, search input, and filter panel
+  │   ├── layout/               # Main layout and responsive sidebar
+  │   └── ui/                   # Reusable UI elements (icons, spinners, messages)
+  ├── constants/                # App-wide constant values (e.g. base URLs, filter options)
+  ├── context/                  # React contexts (favorites, filters)
+  ├── hooks/                    # Custom React hooks (e.g. filtering, media queries)
+  ├── pages/                    # Next.js routes (index, character/[id])
+  └── types/                    # TypeScript shared types
+
+---
+
+## 🧪 Testing
+
+The project includes basic unit tests using:
+
+- **Jest**
+- **React Testing Library**
+
+To run tests:
 
 ```bash
+npm run test
+
+---
+
+📦 Getting Started
+1. Clone the repository:
+git clone https://github.com/jhondeiby310/rick-morty.git
+cd rick-and-morty-app
+
+2. Install dependencies:
+npm install
+
+3. Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+⚙️ Requirements
+Node.js ≥ 18.x
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+⚠️ This project does not support Node 14.x due to modern dependencies.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+🌐 Environment Variables
+The app currently uses a public API that does not require authentication.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+In a production-grade setup, the base URL could be managed using .env variables:
 
-## Learn More
+NEXT_PUBLIC_BASE_URL=https://rickandmortyapi.com/api
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+📄 License
+This project was developed as part of a technical test.
+Personal or educational use is permitted.
