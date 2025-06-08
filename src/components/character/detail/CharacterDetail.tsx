@@ -41,7 +41,7 @@ export default function CharacterDetail({ character, isLoading, isError, errorMe
 
   return (
     <div className="w-full pt-2 md:pt-7 px-4 md:px-0 lg:px-10 xl:px-16 2xl:px-20">
-      <BackButton style="block md:hidden mb-10" onClick={() => router.push("/")} />
+      <BackButton style="block md:hidden mb-6" onClick={() => router.push("/")} />
       <CharacterAvatarWithIcon
         image={character.image}
         alt={character.name}

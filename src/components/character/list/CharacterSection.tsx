@@ -25,7 +25,7 @@ export default function CharacterSection({
 }: CharacterSectionProps) {
     return (
         <div>
-            <h3 className="uppercase text-xs font-bold text-gray-400 mb-4 px-3">
+            <h3 className="uppercase text-xs font-bold text-gray-400 mb-5 px-3">
                 {title} ({characters.length})
             </h3>
             <ul>

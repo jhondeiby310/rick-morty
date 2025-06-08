@@ -5,6 +5,14 @@ import SearchMetaInfo from "./SearchMetaInfo";
 import { useFilters } from "@/context/FiltersContext";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
+/**
+ * Component that renders the search and filter section of the page.
+ * 
+ * - Shows a search input and header.
+ * - On mobile with active filters, it shows only a compact header.
+ * - On mobile, the filters panel opens as a full-screen overlay.
+ * - Displays current active filters metadata.
+ */
 export default function SeacrhAndFilters() {
 
   const { characterType, species, openFiltersPanel, setOpenFiltersPanel } = useFilters();
@@ -24,8 +32,8 @@ export default function SeacrhAndFilters() {
           <AdvancedSearchHeader />
         ) : (
           <>
-            <h2 className="text-2xl mb-4">Rick and Morty list</h2>
-            <div className="relative mb-2">
+            <h2 className="text-2xl font-bold md:font-normal mb-4 text-font-dark">Rick and Morty list</h2>
+            <div className="relative my-8">
               <SearchInput />
             </div>
           </>

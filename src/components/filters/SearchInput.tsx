@@ -38,20 +38,22 @@ export default function SearchInput() {
         <div className="relative w-full mb-4">
             <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
+                name="search-characters"
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search or filter results"
-                className="w-full h-12 outline-0 bg-[#F3F4F6] px-10 py-2 rounded-md text-sm"
+                className="w-full h-10 md:h-[52px] outline-0 bg-gray-100 px-10 py-2 rounded-md text-sm font-medium"
             />
 
             <button
                 ref={buttonRef}
                 onClick={() => setOpenFiltersPanel(!openFiltersPanel)}
-                className={`absolute cursor-pointer right-2 top-1/2 transform -translate-y-1/2 p-1 rounded-md hover:bg-[#8054C70D] ${openFiltersPanel && "bg-[#EEE3FF] hover:bg-[#EEE3FF]"
+                className={`absolute cursor-pointer right-2 top-1/2 transform -translate-y-1/2 p-1 rounded-md hover:bg-[#8054C70D]
+                     ${openFiltersPanel && "bg-primary-light hover:bg-primary-light"
                     }`}
             >
-                <AdjustmentsVerticalIcon className="w-7 h-7 text-[#8054C7]" />
+                <AdjustmentsVerticalIcon className="w-6 h-6 text-primary" />
             </button>
 
             <AnimatePresence>

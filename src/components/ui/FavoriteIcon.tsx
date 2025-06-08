@@ -11,7 +11,7 @@ type Props = {
  */
 export default function FavoriteIcon({ isFavorite, size = 6}: Props) {
   const Icon = isFavorite ? HeartSolid : HeartOutline;
-  const color = isFavorite ? "text-[#63D838]" : "text-gray-400";
+  const color = isFavorite ? "text-secondary" : "text-gray-400";
 
   return <Icon data-testid="favorite-icon" className={`w-${size} h-${size} ${color}`} />;
 }

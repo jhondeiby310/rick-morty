@@ -15,7 +15,7 @@ export default function BackButton({
             data-testid="back-button"
             onClick={onClick}
             className={`cursor-pointer ${style}`}>
-            <ArrowLeftIcon className="w-6 h-6 text-[#8054C7]" />
+            <ArrowLeftIcon className="w-6 h-6 text-primary" />
         </button>
     );
 }

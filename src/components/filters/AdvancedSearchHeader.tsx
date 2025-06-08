@@ -26,10 +26,10 @@ export default function AdvancedSearchHeader() {
     return (
         <div className="flex justify-between px-3">
             <BackButton onClick={() => setOpenFiltersPanel(true)} />
-            <h2 className="text-lg font-medium text-black">Advanced search</h2>
+            <h2 className="text-base font-semibold text-gray-900">Advanced search</h2>
             <button
                 onClick={clearFilters}
-                className="right-4 text-[#8054C7] text-sm font-medium cursor-pointer"
+                className="right-4 text-primary text-base font-semibold cursor-pointer"
             >
                 Done
             </button>

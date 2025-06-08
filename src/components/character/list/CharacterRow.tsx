@@ -23,17 +23,17 @@ export default function CharacterRow({ character, selected, onSelect, onToggleFa
         <li
             onClick={() => onSelect(character.id)}
             className={`
-                relative flex items-center justify-between h-18 p-4
+                relative flex items-center justify-between h-[74px] p-4
                 cursor-pointer transition rounded-lg
-                ${selected ? "bg-[#EEE3FF]" : "hover:bg-gray-100"}
+                ${selected ? "bg-primary-light" : "hover:bg-gray-100"}
                 before:absolute before:top-0 before:left-3 before:right-3 before:h-px before:bg-gray-200
             `}
         >
             <div className="flex items-center gap-2 overflow-hidden">
                 <img src={character.image} alt={character.name} className="w-8 h-8 rounded-full" />
                 <div className="truncate">
-                    <p className="text-sm font-medium truncate">{character.name}</p>
-                    <p className="text-sm text-gray-500 truncate">{character.species}</p>
+                    <p className="text-base font-semibold text-gray-900 truncate">{character.name}</p>
+                    <p className="text-base font-normal text-gray-500 truncate">{character.species}</p>
                 </div>
             </div>
 

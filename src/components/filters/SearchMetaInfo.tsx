@@ -12,7 +12,7 @@ type Props = {
  */
 export default function SearchMetaInfo({ activeFilters }: Props) {
   const { data: characters } = useCharacters();
-  const { search, characterType, species } = useFilters();
+  const { search, characterType, species, setOpenFiltersPanel } = useFilters();
   const { favorites } = useFavorites();
 
   let resultsCount = 0;
@@ -36,12 +36,13 @@ export default function SearchMetaInfo({ activeFilters }: Props) {
 
   return (
     <div className="flex items-center justify-between mt-2 text-sm border-t border-b border-gray-200 h-18 md:border-none md:h-8">
-      <p className="text-[#5A3696] font-medium">
+      <p className="text-[#2563eb] text-base font-semibold">
         {resultsCount} Result{resultsCount !== 1 ? "s" : ""}
       </p>
 
       {activeFiltersCount > 0 && (
-        <span className="bg-green-100 text-[#5ecc36] text-xs px-3 py-1 rounded-full font-semibold">
+        <span onClick={() => setOpenFiltersPanel(true)}
+          className="bg-green-100 text-[#3b8520] cursor-pointer text-sm px-3 py-1 rounded-full font-semibold">
           {activeFiltersCount} Filter{activeFiltersCount > 1 ? "s" : ""}
         </span>
       )}

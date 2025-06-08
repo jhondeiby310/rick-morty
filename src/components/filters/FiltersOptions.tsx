@@ -14,9 +14,9 @@ export default function FilterOptions({ label, active = false, selectOption }: F
   return (
     <button
       onClick={selectOption}
-      className={`w-full h-10 cursor-pointer px-3 py-1 text-sm rounded-md border transition ${active
-        ? "bg-[#EEE3FF] text-[#8054C7] border-[#EEE3FF]"
-        : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+      className={`w-full h-11 cursor-pointer px-3 py-1 text-sm font-semibold rounded-lg border transition ${active
+        ? "bg-primary-light text-primary border-primary-light"
+        : "bg-white text-gray-900 border-gray-200 hover:bg-gray-50"
         }`}
     >
       {label}

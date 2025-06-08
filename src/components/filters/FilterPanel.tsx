@@ -42,19 +42,19 @@ export default function FilterPanel({ onClose }: Props) {
     <div
       className={`${isMobile
         ? "fixed inset-0 bg-white z-50 flex flex-col pt-12 p-6"
-        : "bg-white rounded-xl shadow-lg p-4 w-full"
+        : "bg-white rounded-md shadow-lg py-6 px-4 w-full"
         }`}
     >
       {isMobile && (
         <div className="mb-4 flex items-center relative">
           <BackButton onClick={onClose}/>
-          <h2 className="absolute left-1/2 transform -translate-x-1/2 text-lg font-normal">
+          <h2 className="absolute left-1/2 transform -translate-x-1/2 text-base text-gray-900 font-semibold">
             Filters
           </h2>
         </div>
       )}
 
-      <div className="flex-grow">
+      <div className="flex-grow mt-10 md:mt-0">
         <FiltersSection
           title="Characters"
           options={CHARACTER_OPTIONS}
@@ -69,13 +69,13 @@ export default function FilterPanel({ onClose }: Props) {
         />
       </div>
 
-      <div className="pt-4">
+      <div className="pt-2">
         <button
           onClick={handleApply}
           disabled={!hasChanged}
-          className={`w-full text-sm py-3 rounded-lg font-medium transition ${hasChanged
-            ? "bg-[#8054C7] hover:bg-[#5A3696] text-white"
-            : "bg-gray-100 text-gray-400 cursor-not-allowed"
+          className={`w-full text-sm py-3 h-10 rounded-lg font-medium transition ${hasChanged
+            ? "bg-primary hover:bg-primary-dark text-white"
+            : "bg-gray-100 text-gray-500 cursor-not-allowed"
             }`}
         >
           Filter

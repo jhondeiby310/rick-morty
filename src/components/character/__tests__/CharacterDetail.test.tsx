@@ -55,7 +55,7 @@ describe("CharacterDetail", () => {
     expect(screen.getByText("Rick Sanchez")).toBeInTheDocument();
     expect(screen.getByText("Human")).toBeInTheDocument();
     expect(screen.getByText("Alive")).toBeInTheDocument();
-    expect(screen.getByText("Earth")).toBeInTheDocument();
+    expect(screen.getByText("Citadel")).toBeInTheDocument();
   });
 
   it("should navigate to the home page when clicking the arrow", () => {

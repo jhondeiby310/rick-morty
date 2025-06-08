@@ -1,14 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}",],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}", // si usas carpetas fuera de src
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {
-      colors: {
-        primary: "#8054C7",
-        "primary-light": "#EEE3FF",
-        "primary-dark": "#5A3696",
-        secondary: "#63D838",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
