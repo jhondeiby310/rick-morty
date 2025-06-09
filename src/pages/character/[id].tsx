@@ -2,16 +2,12 @@ import CharacterDetail from "@/components/character/detail/CharacterDetail";
 import MainLayout from "@/components/layout/MainLayout";
 import { GetServerSideProps } from "next";
 import { getCharacterById } from "@/api/getCharacterById";
-import { Character } from "@/types/types";
+import { ApiErrorResponse, Character } from "@/types/types";
 import { isAxiosError } from "axios";
 
 type Props = {
   character?: Character;
   errorMessage?: string;
-};
-
-type ApiErrorResponse = {
-  error: string;
 };
 
 /**
