@@ -2,7 +2,7 @@
 
 A responsive web application built with Next.js that allows users to browse, filter, and favorite characters from the Rick and Morty series. Character details are available, and filters include search, species, and favorite status. Favorite characters are persisted across sessions.
 
-📍 **Live demo**: [rick-morty-nine-black.vercel.app]
+📍 **Live demo**:  [rick-morty-nine-black.vercel.app]
 
 ---
 
